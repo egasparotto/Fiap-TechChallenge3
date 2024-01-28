@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FiapOrders.WebApi.Infra.Base
+﻿namespace FiapOrders.Core.Domain.Configurations
 {
     public static class RabbitMqConfiguration
     {

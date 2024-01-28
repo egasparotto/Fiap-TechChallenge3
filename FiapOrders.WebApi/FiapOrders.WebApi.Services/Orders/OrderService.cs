@@ -32,6 +32,7 @@ namespace FiapOrders.WebApi.Services.Orders
 
             var order = new Order()
             {
+                Id = Guid.NewGuid().ToString(),
                 Name = orderDTO?.Name,
                 Email = orderDTO?.Email,
                 Items = itens

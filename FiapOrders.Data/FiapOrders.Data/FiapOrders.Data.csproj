@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-FiapOrders.Data-49eae2d7-614a-4700-9446-bfa0050e93e2</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
+  </ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\FiapOrders.Data.Infra\FiapOrders.Data.Infra.csproj" />
+	  <ProjectReference Include="..\FiapOrders.Data.Services\FiapOrders.Data.Services.csproj" />
+	</ItemGroup>
+</Project>

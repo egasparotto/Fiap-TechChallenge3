@@ -1,0 +1,28 @@
+{
+  "profiles": {
+    "FiapOrders.Data": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development",
+        "RabbitMq.HostName": "localhost",
+        "RabbitMq.Username": "guest",
+        "RabbitMq.Password": "guest",
+        "MongoDb.ConnectionString": "mongodb://root:example@localhost:27017/",
+        "MongoDb.Database": "FiapOrders"
+      },
+      "dotnetRunMessages": true
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development",
+        "RabbitMq.HostName": "localhost",
+        "RabbitMq.Username": "guest",
+        "RabbitMq.Password": "guest",
+        "MongoDb.ConnectionString": "mongodb://root:example@localhost:27017/",
+        "MongoDb.Database": "FiapOrders"
+      }
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json"
+}
