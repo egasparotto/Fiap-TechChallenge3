@@ -1,5 +1,6 @@
+using FiapOrders.Core.Domain.Configurations;
 using FiapOrders.WebApi.Configuration;
-using FiapOrders.WebApi.Infra.Base;
+using MassTransit;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +12,20 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddRepositories();
 builder.Services.AddServices();
-builder.Services.AddSingleton<RabbitMqService>();
+
+builder.Services.AddMassTransit(x =>
+{
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host(RabbitMqConfiguration.HostName, "/", h =>
+        {
+            h.Username(RabbitMqConfiguration.Username);
+            h.Password(RabbitMqConfiguration.Password);
+        });
+
+        cfg.ConfigureEndpoints(context);
+    });
+});
 
 var app = builder.Build();
 

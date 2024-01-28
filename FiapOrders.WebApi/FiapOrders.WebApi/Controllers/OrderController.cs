@@ -23,7 +23,7 @@ namespace FiapOrders.WebApi.Controllers
         public async Task<IActionResult> NewOrder([FromBody] OrderDTO orderDTO)
         {
             var result = await _orderService.NewOrder(orderDTO);
-            if(result.Errors != null)
+            if (result.Errors != null)
             {
                 return BadRequest(result.Errors);
             }
