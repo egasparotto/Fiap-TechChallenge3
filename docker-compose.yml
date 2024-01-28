@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  webapi:
+    build:
+      context: .
+      dockerfile: FiapOrders.WebApi/FiapOrders.WebApi/Dockerfile
+    ports:
+      - "5000:8080"
+    environment:
+      RabbitMq.HostName: rabbitmq
+      RabbitMq.Username: guest
+      RabbitMq.Password: guest
+    depends_on:
+      - rabbitmq
+  rabbitmq:   
+    image: "masstransit/rabbitmq"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
