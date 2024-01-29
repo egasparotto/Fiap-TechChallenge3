@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{A5FF82ED-F90D-4296-99C1-F2E3A240490C}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yml = docker-compose.yml
+		readme.md = readme.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiapOrders.WebApi.Services", "FiapOrders.WebApi\FiapOrders.WebApi.Services\FiapOrders.WebApi.Services.csproj", "{6E0D2A82-E2F7-4F3A-B38F-C392B0ECF950}"
@@ -26,11 +27,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{1B9F8714-B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiapOrders.Data", "FiapOrders.Data\FiapOrders.Data\FiapOrders.Data.csproj", "{A06470A8-042A-420A-BE27-F5E6EC4DA3A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiapOrders.Data.Domain", "FiapOrders.Data\FiapOrders.Data.Domain\FiapOrders.Data.Domain.csproj", "{B9364C79-FF15-4039-8F9F-FE73ECB47557}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiapOrders.Data.Domain", "FiapOrders.Data\FiapOrders.Data.Domain\FiapOrders.Data.Domain.csproj", "{B9364C79-FF15-4039-8F9F-FE73ECB47557}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiapOrders.Data.Infra", "FiapOrders.Data\FiapOrders.Data.Infra\FiapOrders.Data.Infra.csproj", "{13C9F5AA-C21F-4ED7-A24E-9010535BBDE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiapOrders.Data.Infra", "FiapOrders.Data\FiapOrders.Data.Infra\FiapOrders.Data.Infra.csproj", "{13C9F5AA-C21F-4ED7-A24E-9010535BBDE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiapOrders.Data.Services", "FiapOrders.Data\FiapOrders.Data.Services\FiapOrders.Data.Services.csproj", "{C1D3B03C-40C4-4CE1-9F80-07011367CDF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FiapOrders.Data.Services", "FiapOrders.Data\FiapOrders.Data.Services\FiapOrders.Data.Services.csproj", "{C1D3B03C-40C4-4CE1-9F80-07011367CDF0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
