@@ -38,9 +38,11 @@ services:
       RabbitMq.Password: guest
       MongoDb.ConnectionString: mongodb://root:example@mongo:27017/
       MongoDb.Database: FiapOrders
+      DatalustSeq.Url: http://seq:5341
     depends_on:
       - rabbitmq
       - mongo
+      - seq
     networks:
       - fiap-rede
 

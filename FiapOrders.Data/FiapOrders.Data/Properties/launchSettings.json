@@ -8,7 +8,8 @@
         "RabbitMq.Username": "guest",
         "RabbitMq.Password": "guest",
         "MongoDb.ConnectionString": "mongodb://root:example@localhost:27017/",
-        "MongoDb.Database": "FiapOrders"
+        "MongoDb.Database": "FiapOrders",
+        "DatalustSeq.Url": "http://localhost:5341"
       },
       "dotnetRunMessages": true
     },
@@ -20,7 +21,8 @@
         "RabbitMq.Username": "guest",
         "RabbitMq.Password": "guest",
         "MongoDb.ConnectionString": "mongodb://root:example@localhost:27017/",
-        "MongoDb.Database": "FiapOrders"
+        "MongoDb.Database": "FiapOrders",
+        "DatalustSeq.Url": "http://localhost:5341"
       }
     }
   },
