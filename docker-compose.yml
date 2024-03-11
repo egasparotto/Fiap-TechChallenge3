@@ -1,5 +1,16 @@
 version: "3.9"
 services:
+  seq:
+    image: datalust/seq:latest
+    container_name: seq
+    ports:
+      - "5341:80"
+    environment:
+      - ACCEPT_EULA=Y
+      - SEQ_ADMIN_PASSWORD=admin
+    networks:
+      - fiap-rede
+
   webapi:
     build:
       context: .
@@ -10,8 +21,13 @@ services:
       RabbitMq.HostName: rabbitmq
       RabbitMq.Username: guest
       RabbitMq.Password: guest
+      DatalustSeq.Url: http://seq:5341
     depends_on:
       - rabbitmq
+      - seq
+    networks:
+      - fiap-rede
+
   data:
     build:
       context: .
@@ -25,11 +41,17 @@ services:
     depends_on:
       - rabbitmq
       - mongo
+    networks:
+      - fiap-rede
+
   rabbitmq:   
     image: "masstransit/rabbitmq"
     ports:
       - "5672:5672"
       - "15672:15672"
+    networks:
+      - fiap-rede
+
   mongo:
     image: mongo
     restart: always
@@ -38,3 +60,9 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
+    networks:
+      - fiap-rede
+
+networks:
+  fiap-rede:
+    driver: bridge

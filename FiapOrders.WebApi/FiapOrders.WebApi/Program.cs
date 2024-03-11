@@ -1,13 +1,17 @@
 using FiapOrders.Core.Domain.Configurations;
 using FiapOrders.WebApi.Configuration;
 using MassTransit;
+using Serilog;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.AddLogSettings();
 
 // Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddRepositories();
