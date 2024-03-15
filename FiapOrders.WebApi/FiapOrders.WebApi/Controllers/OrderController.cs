@@ -1,11 +1,12 @@
 ﻿using FiapOrders.Core.Domain.Entities.Orders;
 using FiapOrders.WebApi.Domain.DTO.Orders;
 using FiapOrders.WebApi.Domain.Interfaces.Services.Orders;
-
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FiapOrders.WebApi.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class OrderController : ControllerBase
