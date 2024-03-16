@@ -31,7 +31,7 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "FiapOrders.WebAPI", Version = "v1" });
     
     // Adiciona a definição de segurança para o esquema Bearer
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
